@@ -1,11 +1,13 @@
+import CursorMask from "./components/CursorMask"
 import Header from "./components/header"
 import Hero from "./components/Hero"
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <Hero></Hero>
+      <Header/>
+      <Hero/>
+      <CursorMask />
     </>
   )
 }
