@@ -4,6 +4,8 @@ import { useTheme } from './ThemeContext.jsx';
 
 const CursorMask = () => {
   const { isDarkMode } = useTheme();
+  const maskSize = 5;
+
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -15,8 +17,8 @@ const CursorMask = () => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const currentX = e.clientX;
-      const currentY = e.clientY;
+      const currentX = e.clientX - maskSize;
+      const currentY = e.clientY - maskSize;
 
       setIsVisible(true);
       x.set(currentX);

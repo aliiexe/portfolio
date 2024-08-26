@@ -4,7 +4,7 @@ import Confetti from 'react-confetti';
 import { useTheme } from './ThemeContext.jsx';
 import { FollowerPointerCard } from './FollowerPointerCard.jsx';
 import CV from '../assets/pdf/ali bourak cv eng.pdf';
-
+import './styles.css'
 
 export default function Hero() {
     const { isDarkMode } = useTheme();
@@ -57,7 +57,7 @@ export default function Hero() {
         </a>
       </div>
       <a href={CV} download="CV Ali Bourak.pdf" onClick={handleDownload}>
-        <button className={`w-40 rounded-full h-10 border-portfolio-100 mt-5 ${isDarkMode ? 'bg-portfolio-700 text-portfolio-200 border-solid border-2 border-portfolio-700' : 'bg-portfolio-200 border-solid border-2 border-portfolio-100'}`}>Download CV</button>
+        <button className={`w-40 rounded-full h-10 border-portfolio-100 mt-5 ${isDarkMode ? 'bg-portfolio-300 text-portfolio-200 border-solid border-2 border-portfolio-700' : 'bg-portfolio-200 border-solid border-2 border-portfolio-100'}`}>Download CV</button>
       </a>
     </div>
   )
