@@ -1,11 +1,11 @@
 import CursorMask from "./components/CursorMask"
-import Header from "./components/header"
 import Hero from "./components/Hero"
+import Navabar from "./components/Navbar"
 
 function App() {
   return (
     <>
-      <Header/>
+      <Navabar/>
       <Hero/>
       <CursorMask />
     </>

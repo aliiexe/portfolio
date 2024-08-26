@@ -2,7 +2,7 @@ import { useTheme } from './ThemeContext.jsx';
 import DarkLogo from "../assets/images/logo dark.png";
 import LightLogo from "../assets/images/logo light.png";
 
-export default function Header() {
+export default function Navabar() {
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
