@@ -1,6 +1,6 @@
-import CursorMask from "./components/CursorMask"
-import Hero from "./components/Hero"
-import Navabar from "./components/Navbar"
+import CursorMask from "./components/CursorMask.jsx"
+import Hero from "./components/Hero.jsx"
+import Navabar from "./components/Navbar.jsx"
 
 function App() {
   return (

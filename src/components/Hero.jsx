@@ -3,7 +3,7 @@ import AliBourak from '../assets/images/alibourak.png';
 import Confetti from 'react-confetti';
 import { useTheme } from './ThemeContext.jsx';
 import { FollowerPointerCard } from './FollowerPointerCard.jsx';
-import CV from '../assets/pdf/ali bourak cv eng.pdf';
+import CV from '../assets/pdf/Ali-Bourak-CV-Eng.pdf';
 import './styles.css'
 
 export default function Hero() {
