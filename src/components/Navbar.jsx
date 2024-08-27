@@ -9,7 +9,7 @@ export default function Navabar() {
     <>
       <div className="flex flex-row justify-evenly items-center mt-10">
         <img src={isDarkMode ? LightLogo : DarkLogo} alt="aliiexe logo" className={`${isDarkMode ? 'h-3/6' : 'h10'}`} />
-        <div className="backdrop-blur-md flex justify-center items-center p-7 bg-transparent rounded-full h-14 border-solid border-2 border-portfolio-100/20 dark:text-white">
+        <div className="z-10 backdrop-blur-md flex justify-center items-center p-7 bg-transparent rounded-full h-14 border-solid border-2 border-portfolio-100/20 dark:text-white">
           <ul className={`flex gap-12 justify-center ${isDarkMode ? 'text-portfolio-200' : 'text-black'}`}>
             <li><a href="/">About</a></li>
             <li><a href="/">Skills</a></li>

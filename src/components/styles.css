@@ -1,0 +1,53 @@
+.container-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    height: 90px;
+  }
+  
+  .container {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .container img {
+    height: 50px;
+    margin: 0 10px;
+  }
+  
+  .container-wrapper::before,
+  .container-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .container-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+  }
+  
+  .container-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+  }
+  
+
+  .dark .container-wrapper::before {
+    background: linear-gradient(to right, #1A202C, transparent);
+  }
+  
+  .dark .container-wrapper::after {
+    background: linear-gradient(to left, #1A202C, transparent);
+  }

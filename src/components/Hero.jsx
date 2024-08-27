@@ -1,14 +1,65 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AliBourak from '../assets/images/alibourak.png';
 import Confetti from 'react-confetti';
 import { useTheme } from './ThemeContext.jsx';
 import { FollowerPointerCard } from './FollowerPointerCard.jsx';
 import CV from '../assets/pdf/Ali-Bourak-CV-Eng.pdf';
+import { motion } from 'framer-motion';
+
 import './styles.css'
+import ae from '../assets/images/ae.png';
+import ai from '../assets/images/ai.png';
+import css from '../assets/images/css.png';
+import figma from '../assets/images/figma.png';
+import html from '../assets/images/html.png';
+import js from '../assets/images/js.png';
+import react from '../assets/images/react.png';
+import laravel from '../assets/images/laravel.png';
+import php from '../assets/images/php.png';
+import ps from '../assets/images/ps.png';
+import Mysql from '../assets/images/Mysql.png';
+import SpringBoot from '../assets/images/springboot.png';
+import angular from '../assets/images/angular.png';
+import bitbucket from '../assets/images/bitbucket.png';
+import nodejs from '../assets/images/nodejs.png';
+import mongodb from '../assets/images/mongodb.png';
+import python from '../assets/images/python.png';
+import tailwind from '../assets/images/tailwind.png';
+import git from '../assets/images/git.png';
+import bootstrap from '../assets/images/bootstrap.png';
 
 export default function Hero() {
     const { isDarkMode } = useTheme();
     const [showConfetti, setShowConfetti] = useState(false);
+
+    const images = [
+      ae,
+      ai,
+      css,
+      figma,
+      html,
+      js,
+      react,
+      laravel,
+      php,
+      ps,
+      Mysql,
+      SpringBoot,
+      angular,
+      bitbucket,
+      nodejs,
+      mongodb,
+      python,
+      tailwind,
+      git,
+      bootstrap,
+    ]
+  
+    useEffect(() => {
+      const container = document.querySelector('.container');
+      const clone =  container.innerHTML;
+      container.innerHTML += clone;
+    }, []);
 
     const handleDownload = () => {
       setShowConfetti(true);
@@ -59,6 +110,22 @@ export default function Hero() {
       <a href={CV} download="CV Ali Bourak.pdf" onClick={handleDownload}>
         <button className={`w-40 rounded-full h-10 border-portfolio-100 mt-5 ${isDarkMode ? 'bg-portfolio-300 text-portfolio-200 border-solid border-2 border-portfolio-700' : 'bg-portfolio-200 border-solid border-2 border-portfolio-100'}`}>Download CV</button>
       </a>
+      <div className={`container-wrapper ${isDarkMode ? '' : ''}`}>
+        <motion.div
+          className="container"
+          initial={{ x: 0 }}
+          animate={{ x: '-50%' }}
+          transition={{
+            duration: 30,
+            ease: 'linear',
+            repeat: Infinity,
+          }}
+        >
+          {images.map((image, index) => (
+            <img key={index} src={image} alt={`Image ${index}`} />
+          ))}
+        </motion.div>
+      </div>
     </div>
   )
 }
